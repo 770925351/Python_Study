@@ -395,5 +395,91 @@ from t.c7 import a
 
 5. 异常
 
+> - ZeroDivisionError 异常处理
 >
+> > 这种异常是在0作为被除数时候会出现,一般解决异常的思路就是用try-except代码块
+> >
+> > ```python
+> > try:
+> >     pass
+> > except 异常名称:
+> >      pass
+> > ```
+>
+> - try-except-else代码块
+>
+> >工作原理:Python尝试执行try代码块中的代码,而且只有try代码块中存在的代码才可能引发异常,except代码块中的代码表示如果出现某种异常时候系统该怎么办,而else代码块中的代码是try代码块中的代码执行成功之后才能运行
+>
+> >```python
+> >try:
+> >    pass
+> >except 异常名称:
+> >    pass
+> >else:
+> >     pass
+> >```
+>
+> - FileNotFoundError异常
+>
+> > 找不到文件会出现这种异常
+>
+> - split()函数
+>
+> > 将字符串按照空格分隔成n个元素,并将这些元素存储在列表中,可以用于去统计一篇文章的单词数量
+>
+> - count()函数
+>
+> > 计算字符串中字串的个数
+> - lower()函数
+> > 将字符串全部转换为小写格式
+
+6. 存储数据
+
+> JSON
+>
+> json模块可以使Python创建json格式文件,下面介绍两个函数,一般使用的时候需要在文件中导入json模块
+>
+> ```python
+> import json
+> ```
+>
+> - json.dump()
+>
+> > json.dump(参数一,参数二)
+> >
+> > 参数一是指你需要写入的内容,参数二是你要写入的文件对象名字
+> >
+> > 示例代码:
+> >
+> > ```Python
+> > numbers = [2,4,6,8,10]
+> > filename = "number.json"
+> > with open(filename,"w") as file :
+> >     json.dump(numbers,file)
+> > ```
+>
+> - json.load()函数
+>
+> >功能是读取json格式文件内容
+> >
+> >使用方法是json.load(文件名),这将返回一个字符串
+> >
+> >```Python
+> >with open(filename) as file :
+> >    content = json.load(file)
+> >```
+
+# 测试代码
+
+1. 单元测试
+
+>核实函数某个方面没有问题
+
+2. 测试用例
+
+> 一组单元测试,核实函数在各种情形下的行为都符合要求
+
+3.全覆盖测试
+
+> 全部测试一遍,了解即可
 
