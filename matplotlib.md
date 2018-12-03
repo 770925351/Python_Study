@@ -1,4 +1,4 @@
-# matplotlib学习
+# matplotlib基础学习
 
 ## 1.配置环境
 
